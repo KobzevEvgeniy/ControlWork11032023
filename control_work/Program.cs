@@ -16,3 +16,25 @@ string[] BaseArray(string stringArray)
     }
     return result;
 }
+
+string [] FindWord (string [] basicText)
+{
+    int count = 0;
+    int size = 0;
+    for (int i = 0; i < basicText.GetLength(0); i++)
+    {
+        if (basicText[i].Length <=3){
+            count++;
+        }
+    }
+    string [] finalArray = new string [count];
+    for (int i = 0; i < basicText.GetLength(0); i++)
+    {
+        if (basicText[i].Length <=3)
+        {
+            finalArray[size] = basicText[i];
+            size++;
+        }
+    }
+    return finalArray;
+}
