@@ -1,9 +1,9 @@
 ﻿Console.Clear();
 Console.WriteLine("Введите слова через пробел: ");
 string el = Console.ReadLine();
-
-
-
+string[] basicText= BaseArray(el);
+string []result=FindWord(basicText);
+Console.WriteLine($"[{String.Join(", ", basicText)}], меньше 3 символов-->[{String.Join(", ", result)}]");
 
 string[] BaseArray(string stringArray)
 {
